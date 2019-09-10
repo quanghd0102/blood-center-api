@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "api",
+      "script": "app/index.js",
+      "watch": true,
+      "exec_mode": "cluster",
+      "instances": 1,
+      "autorestart": true
+    }
+  ]
+}

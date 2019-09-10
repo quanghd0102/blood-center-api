@@ -1,0 +1,84 @@
+{
+  "name": "quang-api-base-hapi-mongodb",
+  "version": "1.0.1",
+  "description": "Api base with HapiJs + mongoDB + mongoose",
+  "engines": {
+    "node": ">=8"
+  },
+  "main": "app",
+  "scripts": {
+    "start": "node app",
+    "dev": "NODE_ENV=development nodemon",
+    "test": "NODE_ENV=test PORT=4001 mocha --exit --reporter nyan",
+    "test:unit": "npm test -- test/unit",
+    "test:watch:unit": "npm run test:unit -- --watch",
+    "test:coverage": "npm test -- --coverage",
+    "test:coverage:unit": "npm run test:unit -- --coverage",
+    "test:coverage:integration": "npm run test:integration -- --coverage",
+    "lint": "eslint app test",
+    "lint:app": "eslint app",
+    "lint:test": "eslint test"
+  },
+  "dependencies": {
+    "@hapi/boom": "^7.4.2",
+    "@hapi/hapi": "^18.3.1",
+    "@hapi/hoek": "^8.0.1",
+    "@hapi/inert": "^5.2.1",
+    "@hapi/joi": "^15.1.0",
+    "@hapi/vision": "^5.5.2",
+    "abstract-logging": "^1.0.0",
+    "aws-sdk": "^2.329.0",
+    "bcrypt": "3.0.1",
+    "dotenv": "^6.0.0",
+    "email-templates": "^5.0.4",
+    "exceljs": "^1.9.1",
+    "faker": "^4.1.0",
+    "hapi-auth-jwt2": "^8.1.0",
+    "hapi-swagger": "^10.0.2",
+    "i18n": "^0.8.3",
+    "ioredis": "^3.2.2",
+    "joi-date-extensions": "^1.2.0",
+    "joi-phone-number": "^2.0.14",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.5",
+    "nodemailer": "^5.1.1",
+    "nodemailer-mailgun-transport": "^1.4.0",
+    "passport": "^0.4.0",
+    "passport-facebook-token": "^3.3.0",
+    "pino": "^5.12.3",
+    "pino-pretty": "^3.0.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5",
+    "slug": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.8.0",
+    "eslint-config-hapi": "^10.1.0",
+    "eslint-plugin-hapi": "^4.0.0",
+    "eslint-plugin-node": "^5.2.0",
+    "jest": "^24.1.0",
+    "jest-junit": "^6.3.0",
+    "jest-nyan-reporter": "^1.0.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "sinon": "^7.2.4",
+    "sinon-chai": "^3.3.0",
+    "supertest": "^3.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "reporters": [
+      [
+        "jest-nyan-reporter",
+        {
+          "suppressErrorReporter": false
+        }
+      ]
+    ]
+  }
+}
