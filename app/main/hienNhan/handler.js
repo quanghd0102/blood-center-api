@@ -1,13 +1,13 @@
 'use strict';
 
-const UserController = require('./controller');
+const HienNhanController = require('./controller');
 const validator = require('./validator');
 
-const controller = new UserController();
+const controller = new HienNhanController();
 
 exports.getMany = {
-  description: 'Get User list',
-  notes: 'Return User items',
+  description: 'Get HienNhan list',
+  notes: 'Return HienNhan items',
   tags: ['api', 'v1'],
   handler: controller.getMany.bind(controller),
   auth: false,
@@ -18,8 +18,8 @@ exports.getMany = {
 };
 
 exports.count = {
-  description: 'Count User list',
-  notes: 'Return a count result of User items',
+  description: 'Count HienNhan list',
+  notes: 'Return a count result of HienNhan items',
   tags: ['api', 'v1'],
   handler: controller.count.bind(controller),
   auth: false,
@@ -29,8 +29,8 @@ exports.count = {
 };
 
 exports.getOne = {
-  description: 'Get a User',
-  notes: 'Return a User by id',
+  description: 'Get a HienNhan',
+  notes: 'Return a HienNhan by id',
   tags: ['api', 'v1'],
   handler: controller.getOne.bind(controller),
   auth: false,
@@ -43,20 +43,20 @@ exports.getOne = {
 };
 
 exports.createOne = {
-  description: 'Create a new User',
-  notes: 'Return created User',
+  description: 'Create a new HienNhan',
+  notes: 'Return created HienNhan',
   tags: ['api', 'v1'],
   handler: controller.createOne.bind(controller),
   auth: false,
   validate: {
     headers: validator.checkToken,
-    payload: validator.createUser
+    payload: validator.createHienNhan
   }
 };
 
 exports.updateOne = {
-  description: 'Update User',
-  notes: 'Return updated User by id',
+  description: 'Update HienNhan',
+  notes: 'Return updated HienNhan by id',
   tags: ['api', 'v1'],
   handler: controller.updateOne.bind(controller),
   auth: false,
@@ -65,13 +65,13 @@ exports.updateOne = {
     params: {
       id: validator.idParam
     },
-    payload: validator.updateUser
+    payload: validator.updateHienNhan
   }
 };
 
 exports.deleteOne = {
-  description: 'Delete a User',
-  notes: 'Return deleted User by id',
+  description: 'Delete a HienNhan',
+  notes: 'Return deleted HienNhan by id',
   tags: ['api', 'v1'],
   handler: controller.deleteOne.bind(controller),
   auth: false,

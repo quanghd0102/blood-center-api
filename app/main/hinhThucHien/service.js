@@ -3,10 +3,10 @@
 const Models = require('../../db/models');
 const BaseServiceCRUD = require('../../base/BaseServiceCRUD');
 
-class UserService extends BaseServiceCRUD {
+class HinhThucHienService extends BaseServiceCRUD {
   constructor() {
-    super(Models.User, 'User');
+    super(Models.HinhThucHien, 'HinhThucHien');
   }
 }
 
-module.exports = UserService;
+module.exports = HinhThucHienService;

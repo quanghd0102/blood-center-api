@@ -6,7 +6,7 @@ const mailgunTransport = require('nodemailer-mailgun-transport');
 
 const mailgunOptions = {
   auth: {
-    api_key: process.env.EMAIL_API_KEY || '',
+    api_key: process.env.EMAIL_API_KEY || 'sfgsfdg',
     domain: process.env.EMAIL_DOMAIN || ''
   }
 };

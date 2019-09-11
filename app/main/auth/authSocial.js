@@ -7,8 +7,8 @@ console.log(process.env.FB_ID);
 passport.use(
   new FacebookTokenStrategy(
     {
-      clientID: process.env.FB_ID || '',
-      clientSecret: process.env.FB_SECRET || ''
+      clientID: process.env.FB_ID || 'dsfg',
+      clientSecret: process.env.FB_SECRET || 'dghdgh'
     },
     (accessToken, refreshToken, profile, done) => {
       return done(null, profile);

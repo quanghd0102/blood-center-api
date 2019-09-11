@@ -6,10 +6,7 @@ const {
   queryParams,
   objectGeoLocation,
   checkToken,
-  searchParams,
-  strUsername,
-  strEmail,
-  strPassword
+  searchParams
 } = require('../../utils/validatorUtils');
 
 exports.queryParams = queryParams;
@@ -22,19 +19,10 @@ exports.idParam = Joi.string()
   .required()
   .description('id is required');
 
-exports.createUser = {
-  username: Joi.string().required(),
-  email: strEmail().required(),
-  password: strPassword().required(),
-  phoneNumber: Joi.string(),
-  avatar: Joi.string()
+exports.createHinhThucHien = {
+  tenHinhThuc: Joi.string().required()
 };
 
-exports.updateUser = {
-  email: strEmail().required(),
-  password: strPassword().required(),
-  phoneNumber: Joi.string(),
-  avatar: Joi.string()
-};
+exports.updateHinhThucHien = {};
 
 exports.activate = Joi.boolean().required();
