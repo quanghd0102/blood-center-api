@@ -1,9 +1,9 @@
 #!/bin/bash
 
-domains=(api-base.quanghoang.me)
+domains=(blood-center-api.quanghoang.me)
 rsa_key_size=4096
 data_path="./compose/certbot"
-email="quang.hd0102@gmail.com" # Adding a valid address is strongly recommended
+email="ga21ru21@gmail.com" # Adding a valid address is strongly recommended
 staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
 
 if [ -d "$data_path" ]; then
