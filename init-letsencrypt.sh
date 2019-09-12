@@ -1,6 +1,6 @@
 #!/bin/bash
 
-domains=(blood-center-api.quanghoang.me)
+domains=(blood-center.quanghoang.me)
 rsa_key_size=4096
 data_path="./compose/certbot"
 email="ga21ru21@gmail.com" # Adding a valid address is strongly recommended

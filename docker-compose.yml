@@ -22,10 +22,10 @@ services:
     environment:
       - NODE_ENV=production
       - DATABASE_URL=mongodb+srv://hoang:vanhoang@mongo@cluster0-aujc1.mongodb.net/test?retryWrites=true&w=majority
-      - HOST=blood-center-api.quanghoang.me
+      - HOST=blood-center.quanghoang.me
       - REDIS_URL=redis://redis:6379/1
       - APP_HOST=0.0.0.0
-      - DOMAIN_NAME=blood-center-api.quanghoang.me
+      - DOMAIN_NAME=blood-center.quanghoang.me
       - PORT=8080
     ports:
       - '8080:8080'
