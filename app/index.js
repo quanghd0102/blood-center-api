@@ -59,7 +59,10 @@ const apiVersionOptions = {
 
 const swaggerOptions = {
   pathPrefixSize: 3,
-  host: `${process.env.APP_HOST || 'localhost'}:${process.env.PORT || 3000}`,
+  host:
+    process.env.NODE_ENV === 'production'
+      ? process.env.DOMAIN_NAME
+      : `${process.env.APP_HOST || 'localhost'}:${process.env.PORT || 3000}`,
   basePath: apiVersionOptions.basePath,
   info: {
     title: `${process.env.APP_NAME} Documentation`,
@@ -76,7 +79,7 @@ const swaggerOptions = {
   security: [{ Bearer: [] }]
 };
 
-process.on('uncaughtException', err => {
+process.on('uncaughtException', (err) => {
   console.log(err, 'Uncaught exception');
   process.exit(1);
 });
