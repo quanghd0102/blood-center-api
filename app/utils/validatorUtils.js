@@ -119,7 +119,8 @@ const queryParams = {
   offset: Joi.number().default(0),
   orderBy: Joi.string(),
   filter: Joi.object().default({}),
-  fields: Joi.array()
+  fields: Joi.array(),
+  includes: Joi.string()
 };
 
 const searchParams = {

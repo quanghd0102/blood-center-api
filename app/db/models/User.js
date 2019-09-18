@@ -2,11 +2,10 @@
 
 const mongoose = require('../connection');
 const Schema = mongoose.Schema;
+const ObjectId = Schema.Types.ObjectId;
 
 const schema = new Schema(
   {
-    avatar: String,
-    phoneNumber: { type: String },
     username: { type: String, unique: true },
     password: { type: String, select: false },
     email: { type: String, unique: true },
@@ -14,10 +13,7 @@ const schema = new Schema(
       type: String,
       default: 'user'
     },
-    facebookId: { type: String, index: true },
-    googleId: { type: String, index: true },
-    resetCode: { type: String, select: false },
-    resetPasswordExpire: { type: Date, select: false },
+    maQuyenHan: { type: ObjectId, ref: 'QuyenHan' },
     pushToken: String
   },
   { timestamps: true }

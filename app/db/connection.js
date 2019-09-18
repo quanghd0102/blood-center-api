@@ -6,13 +6,13 @@ mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost:27017/test', {
 });
 
 function setId(schema) {
-  schema.virtual('id').get(function() {
+  schema.virtual('id').get(function () {
     return this._id.toHexString();
   });
 }
 
 function builderFunc(schema) {
-  schema.statics.queryBuilder = function(query) {
+  schema.statics.queryBuilder = function (query) {
     let builder;
     let count;
     builder = this.find();
@@ -34,11 +34,11 @@ function builderFunc(schema) {
     if (query.orderBy) {
       builder = builder.sort(query.orderBy);
     }
-    if (query.populate) {
-      builder = builder.populate(query.populate);
+    if (query.includes) {
+      builder = builder.populate(query.includes);
     }
     if (count) {
-      return Promise.all([builder.exec(), count.exec()]).then(result => ({
+      return Promise.all([builder.exec(), count.exec()]).then((result) => ({
         data: result[0],
         total: result[1]
       }));

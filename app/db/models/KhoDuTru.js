@@ -13,7 +13,8 @@ const KhoDuTruSchema = new Schema(
     diaChi: {
       type: String,
       required: false
-    }
+    },
+    tongKet: Schema.Types.Mixed
   },
   {
     timestamps: {

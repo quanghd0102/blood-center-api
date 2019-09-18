@@ -27,7 +27,7 @@ exports.createHienNhan = {
   maPhuongThucHien: Joi.string().required(),
   thoigianHien: Joi.date().required(),
   ghiChu: Joi.string(),
-  theTich: Joi.number().required(),
+  luuLuong: Joi.number().required(),
   maKho: Joi.string(),
   maMau: Joi.string().required(),
   maCongThucMau: Joi.string()

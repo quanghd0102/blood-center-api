@@ -1,29 +1,35 @@
 'use strict';
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const ObjectId = Schema.Types.ObjectId;
 const mongoosePaginate = require('mongoose-paginate');
 
 const HienNhanSchema = new Schema(
   {
     //replace model structure
     idNguoiNhan: {
-      type: String,
+      type: ObjectId,
+      ref: 'ThanhVien',
       required: true
     },
     idNguoiHien: {
-      type: String,
+      type: ObjectId,
+      ref: 'ThanhVien',
       required: true
     },
     maHinhThucHien: {
-      type: String,
+      type: ObjectId,
+      ref: 'HinhThucHien',
       required: true
     },
     maDiaDiemHien: {
-      type: String,
+      type: ObjectId,
+      ref: 'DiaDiemHen',
       required: false
     },
     maPhuongThucHien: {
-      type: String,
+      type: ObjectId,
+      ref: 'PhuongThucHien',
       required: true
     },
     thoigianHien: {
@@ -34,20 +40,23 @@ const HienNhanSchema = new Schema(
       type: String,
       required: false
     },
-    theTich: {
+    luuLuong: {
       type: Number,
       required: true
     },
     maKho: {
-      type: String,
+      type: ObjectId,
+      ref: 'KhoDuTru',
       required: false
     },
     maMau: {
-      type: String,
+      type: ObjectId,
+      ref: 'NhomMau',
       required: true
     },
     maCongThucMau: {
-      type: String,
+      type: ObjectId,
+      ref: 'CongThucMau',
       required: false
     }
   },

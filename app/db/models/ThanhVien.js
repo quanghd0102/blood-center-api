@@ -1,13 +1,15 @@
 'use strict';
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const ObjectId = Schema.Types.ObjectId;
 const mongoosePaginate = require('mongoose-paginate');
 
 const ThanhVienSchema = new Schema(
   {
     //replace model structure
     taiKhoan: {
-      type: String,
+      type: ObjectId,
+      ref: 'User',
       required: true
     },
     hoTen: {
@@ -79,8 +81,8 @@ const ThanhVienSchema = new Schema(
       required: false
     },
     maMau: {
-      type: String,
-      required: false
+      type: ObjectId,
+      ref: 'NhomMau'
     },
     maTinhTrangHien: {
       type: String,

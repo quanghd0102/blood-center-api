@@ -13,7 +13,6 @@ const PhuongThucHien = require('./PhuongThucHien');
 const DiaDiemHien = require('./DiaDiemHien');
 const HinhThucHien = require('./HinhThucHien');
 const QuyenHan = require('./QuyenHan');
-const TaiKhoan = require('./TaiKhoan');
 
 module.exports = {
   ThanhVien,
@@ -27,7 +26,6 @@ module.exports = {
   DiaDiemHien,
   HinhThucHien,
   QuyenHan,
-  TaiKhoan,
   User,
   Category
 };
