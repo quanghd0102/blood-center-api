@@ -1,10 +1,8 @@
 'use strict';
 
 const User = require('./User');
-const Category = require('./Category');
 const ThanhVien = require('./ThanhVien');
 const HienNhan = require('./HienNhan');
-const TinhTrangHien = require('./TinhTrangHien');
 const NhomMau = require('./NhomMau');
 const KhoDuTru = require('./KhoDuTru');
 const CongThucMau = require('./CongThucMau');
@@ -17,7 +15,6 @@ const QuyenHan = require('./QuyenHan');
 module.exports = {
   ThanhVien,
   HienNhan,
-  TinhTrangHien,
   NhomMau,
   KhoDuTru,
   CongThucMau,
@@ -26,6 +23,5 @@ module.exports = {
   DiaDiemHien,
   HinhThucHien,
   QuyenHan,
-  User,
-  Category
+  User
 };
