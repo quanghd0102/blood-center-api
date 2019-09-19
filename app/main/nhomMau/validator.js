@@ -24,6 +24,9 @@ exports.createNhomMau = {
   mauHiem: Joi.boolean()
 };
 
-exports.updateNhomMau = {};
+exports.updateNhomMau = {
+  tenNhomMau: Joi.string(),
+  mauHiem: Joi.boolean()
+};
 
 exports.activate = Joi.boolean().required();

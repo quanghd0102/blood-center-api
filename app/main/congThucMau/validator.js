@@ -23,6 +23,8 @@ exports.createCongThucMau = {
   tenCongThuc: Joi.string().required()
 };
 
-exports.updateCongThucMau = {};
+exports.updateCongThucMau = {
+  tenCongThuc: Joi.string()
+};
 
 exports.activate = Joi.boolean().required();

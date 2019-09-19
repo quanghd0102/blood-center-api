@@ -33,6 +33,18 @@ exports.createHienNhan = {
   maCongThucMau: Joi.string()
 };
 
-exports.updateHienNhan = {};
+exports.updateHienNhan = {
+  idNguoiNhan: Joi.string(),
+  idNguoiHien: Joi.string(),
+  maHinhThucHien: Joi.string(),
+  maDiaDiemHien: Joi.string(),
+  maPhuongThucHien: Joi.string(),
+  thoigianHien: Joi.date(),
+  ghiChu: Joi.string(),
+  luuLuong: Joi.number(),
+  maKho: Joi.string(),
+  maMau: Joi.string(),
+  maCongThucMau: Joi.string()
+};
 
 exports.activate = Joi.boolean().required();

@@ -23,6 +23,8 @@ exports.createHinhThucHien = {
   tenHinhThuc: Joi.string().required()
 };
 
-exports.updateHinhThucHien = {};
+exports.updateHinhThucHien = {
+  tenHinhThuc: Joi.string()
+};
 
 exports.activate = Joi.boolean().required();

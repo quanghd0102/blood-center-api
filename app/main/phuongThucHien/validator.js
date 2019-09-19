@@ -23,6 +23,6 @@ exports.createPhuongThucHien = {
   tenPhuongPhap: Joi.string().required()
 };
 
-exports.updatePhuongThucHien = {};
+exports.updatePhuongThucHien = { tenPhuongPhap: Joi.string() };
 
 exports.activate = Joi.boolean().required();

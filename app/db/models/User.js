@@ -8,11 +8,7 @@ const schema = new Schema(
   {
     password: { type: String, select: false },
     email: { type: String, unique: true },
-    role: {
-      type: String,
-      default: 'user'
-    },
-    maQuyenHan: { type: ObjectId, ref: 'QuyenHan' },
+    maQuyenHan: { type: ObjectId, ref: 'QuyenHan', default: '5d83a6164043f4167940c59f' },
     pushToken: String
   },
   { timestamps: true }

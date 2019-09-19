@@ -50,18 +50,12 @@ class AuthService {
 
   async register(payload) {
     try {
-      const { email, username } = payload;
+      const { email } = payload;
       const checkUserByEmail = await Models.User.findOne({
         email
       });
       if (checkUserByEmail) {
         throw Boom.badRequest('Email is exist');
-      }
-      const checkUserByUsername = await Models.User.findOne({
-        username
-      });
-      if (checkUserByUsername) {
-        throw Boom.badRequest('Username is exist');
       }
       // Check use payload have password or random create a new one
       const hashPassword = await PasswordUtils.hash(payload.password);
@@ -69,8 +63,7 @@ class AuthService {
       payload.password = hashPassword;
 
       let data = await Models.User.create(payload);
-      data.scope = 'user';
-      data = _.pick(data, ['email', 'username', '_id', 'scope']);
+      data = _.pick(data, ['email', '_id', 'maQuyenHan']);
       data.id = data._id;
       delete data._id;
       return _.assign(

@@ -24,6 +24,9 @@ exports.createDiaDiemHien = {
   ghiChu: Joi.string()
 };
 
-exports.updateDiaDiemHien = {};
+exports.updateDiaDiemHien = {
+  tenDiaDiem: Joi.string(),
+  ghiChu: Joi.string()
+};
 
 exports.activate = Joi.boolean().required();

@@ -26,6 +26,11 @@ exports.createHoatDong = {
   moTa: Joi.string()
 };
 
-exports.updateHoatDong = {};
+exports.updateHoatDong = {
+  tenHoatDong: Joi.string(),
+  maDiaDiem: Joi.string(),
+  thoiGian: Joi.date(),
+  moTa: Joi.string()
+};
 
 exports.activate = Joi.boolean().required();

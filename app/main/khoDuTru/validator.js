@@ -21,9 +21,14 @@ exports.idParam = Joi.string()
 
 exports.createKhoDuTru = {
   tenKho: Joi.string().required(),
-  diaChi: Joi.string()
+  diaChi: Joi.string(),
+  tongKet: Joi.object()
 };
 
-exports.updateKhoDuTru = {};
+exports.updateKhoDuTru = {
+  tenKho: Joi.string(),
+  diaChi: Joi.string(),
+  tongKet: Joi.object()
+};
 
 exports.activate = Joi.boolean().required();

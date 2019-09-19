@@ -23,6 +23,6 @@ exports.createQuyenHan = {
   tenQuyenHan: Joi.string().required()
 };
 
-exports.updateQuyenHan = {};
+exports.updateQuyenHan = { tenQuyenHan: Joi.string() };
 
 exports.activate = Joi.boolean().required();
