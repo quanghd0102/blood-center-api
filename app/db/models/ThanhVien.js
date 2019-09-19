@@ -83,10 +83,6 @@ const ThanhVienSchema = new Schema(
     maMau: {
       type: ObjectId,
       ref: 'NhomMau'
-    },
-    maTinhTrangHien: {
-      type: String,
-      required: false
     }
   },
   {

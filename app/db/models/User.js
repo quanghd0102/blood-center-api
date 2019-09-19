@@ -6,7 +6,6 @@ const ObjectId = Schema.Types.ObjectId;
 
 const schema = new Schema(
   {
-    username: { type: String, unique: true },
     password: { type: String, select: false },
     email: { type: String, unique: true },
     role: {

@@ -13,17 +13,13 @@ exports.validateLogin = {
 };
 
 exports.validateRegister = {
-  username: Joi.string().required(),
   email: strEmail().required(),
   password: strPassword().required()
 };
 
 exports.validateRegisterByToken = {
   token: Joi.string().required(),
-  password: strPassword().required(),
-  firstName: Joi.string().required(),
-  lastName: Joi.string().required(),
-  avatar: Joi.string()
+  password: strPassword().required()
 };
 
 exports.forgotPassword = {
