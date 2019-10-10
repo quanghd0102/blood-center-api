@@ -20,8 +20,8 @@ exports.idParam = Joi.string()
   .description('id is required');
 
 exports.createHienNhan = {
-  idNguoiNhan: Joi.string().required(),
-  idNguoiHien: Joi.string().required(),
+  idNguoiNhan: Joi.string(),
+  idNguoiHien: Joi.string(),
   maHinhThucHien: Joi.string().required(),
   maDiaDiemHien: Joi.string(),
   maPhuongThucHien: Joi.string().required(),
@@ -30,7 +30,7 @@ exports.createHienNhan = {
   luuLuong: Joi.number().required(),
   maKho: Joi.string(),
   maMau: Joi.string().required(),
-  maCongThucMau: Joi.string()
+  maCongThucMau: Joi.string().required()
 };
 
 exports.updateHienNhan = {

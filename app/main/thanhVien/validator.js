@@ -30,7 +30,7 @@ exports.createThanhVien = {
   soDienThoai: Joi.string(),
   ghiChu: Joi.string(),
   lamSang: Joi.string(),
-  soLanHien: Joi.number().required(),
+  soLanHien: Joi.number(),
   soLanNhan: Joi.number(),
   thoiGianHienGanNhat: Joi.date(),
   trangThaiHien: Joi.boolean(),
@@ -38,7 +38,8 @@ exports.createThanhVien = {
   canNang: Joi.number(),
   huyetAp: Joi.string(),
   venTo: Joi.boolean(),
-  maMau: Joi.string()
+  maMau: Joi.string(),
+  maCongThucMau: Joi.string()
 };
 
 exports.updateThanhVien = {
@@ -60,7 +61,8 @@ exports.updateThanhVien = {
   canNang: Joi.number(),
   huyetAp: Joi.string(),
   venTo: Joi.boolean(),
-  maMau: Joi.string()
+  maMau: Joi.string(),
+  maCongThucMau: Joi.string()
 };
 
 exports.activate = Joi.boolean().required();

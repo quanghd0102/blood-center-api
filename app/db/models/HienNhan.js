@@ -9,13 +9,11 @@ const HienNhanSchema = new Schema(
     //replace model structure
     idNguoiNhan: {
       type: ObjectId,
-      ref: 'ThanhVien',
-      required: true
+      ref: 'ThanhVien'
     },
     idNguoiHien: {
       type: ObjectId,
-      ref: 'ThanhVien',
-      required: true
+      ref: 'ThanhVien'
     },
     maHinhThucHien: {
       type: ObjectId,
@@ -24,7 +22,7 @@ const HienNhanSchema = new Schema(
     },
     maDiaDiemHien: {
       type: ObjectId,
-      ref: 'DiaDiemHen',
+      ref: 'DiaDiemHien',
       required: false
     },
     maPhuongThucHien: {
@@ -37,8 +35,7 @@ const HienNhanSchema = new Schema(
       required: true
     },
     ghiChu: {
-      type: String,
-      required: false
+      type: String
     },
     luuLuong: {
       type: Number,
@@ -46,8 +43,7 @@ const HienNhanSchema = new Schema(
     },
     maKho: {
       type: ObjectId,
-      ref: 'KhoDuTru',
-      required: false
+      ref: 'KhoDuTru'
     },
     maMau: {
       type: ObjectId,
@@ -56,8 +52,7 @@ const HienNhanSchema = new Schema(
     },
     maCongThucMau: {
       type: ObjectId,
-      ref: 'CongThucMau',
-      required: false
+      ref: 'CongThucMau'
     }
   },
   {
