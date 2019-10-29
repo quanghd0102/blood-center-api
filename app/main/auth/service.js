@@ -158,7 +158,7 @@ class AuthService {
 
   async changePassword(id, payload) {
     try {
-      const user = await Models.User.query().findById(id);
+      const user = await Models.User.findById(id);
 
       const isCorrectPassword = await PasswordUtils.compare(payload.currentPassword, user.password);
       if (!isCorrectPassword) {
@@ -166,7 +166,7 @@ class AuthService {
       }
 
       const hashPassword = await PasswordUtils.hash(payload.password);
-      await user.$query().update({ password: hashPassword });
+      await user.update({ password: hashPassword });
       return { success: true, message: 'Password changed successfully' };
     } catch (err) {
       throw err;
