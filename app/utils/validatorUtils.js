@@ -114,7 +114,7 @@ function idUuid() {
 const queryParams = {
   limit: Joi.number()
     .min(1)
-    .max(100)
+    .max(500)
     .default(10),
   offset: Joi.number().default(0),
   orderBy: Joi.string(),
@@ -126,7 +126,7 @@ const queryParams = {
 const searchParams = {
   limit: Joi.number()
     .min(1)
-    .max(100)
+    .max(500)
     .default(10),
   offset: Joi.number().default(0),
   orderBy: Joi.string(),
